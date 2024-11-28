@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.emf.codegen.ecore.ui.EmptyProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.emf.parsley.wizards"/>
+			<item value="org.eclipse.emf.parsley.wizards/org.eclipse.emf.parsley.project.Examples"/>
+			<item value="org.eclipse.emf.codegen.ui.JETNewWizards"/>
+			<item value="org.eclipse.ui.Examples"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.emf.examples.EMF"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.emf.parsley.ui.Examples"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.emf.validation.examples.category"/>
+		</list>
+		<section name="NewWizard.dialogBounds">
+		</section>
+	</section>
+</section>

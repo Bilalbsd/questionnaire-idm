@@ -1,0 +1,21 @@
+INDEX VERSION 1.134+/home/e20200007470/Bureau/project_idm/metamodel_questionnaire/.metadata/.plugins/org.eclipse.jdt.core
+1320027519.index
+68968858.index
+445113066.index
+1069065916.index
+581720473.index
+589430755.index
+166239802.index
+1786653312.index
+3492514239.index
+2683469051.index
+3622651291.index
+2376968973.index
+2908162689.index
+1795930602.index
+1865797976.index
+4112233470.index
+436805130.index
+2815719765.index
+3656509212.index
+3164139092.index

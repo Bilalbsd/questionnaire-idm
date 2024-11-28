@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="question" nsURI="http://www.example.org/question" nsPrefix="question">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Question">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="DifficulteValide"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="DifficulteValide" value="&#xA;            difficulte >= 1 and difficulte &lt;= 5"/>
+    </eAnnotations>
+    <eOperations name="testerReponse" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propositions" lowerBound="2"
+        upperBound="-1" eType="#//Proposition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intitule" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="difficulte" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeDuChoix" eType="#//TypeChoix"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reponses" lowerBound="1"
+        upperBound="-1" eType="#//Proposition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etiquettes" upperBound="-1"
+        eType="#//Etiquette" eOpposite="#//Etiquette/questions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Questionnaire">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peutRevenirEnArriere" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questions" upperBound="-1"
+        eType="#//Question" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etiquettes" upperBound="-1"
+        eType="#//Etiquette" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Proposition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contenu" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Etiquette">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etiquette" lowerBound="1"
+        upperBound="-1" eType="#//Etiquette"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questions" upperBound="-1"
+        eType="#//Question" eOpposite="#//Question/etiquettes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TypeChoix">
+    <eLiterals name="CHOIX_UNIQUE"/>
+    <eLiterals name="CHOIX_MULTIPLE"/>
+  </eClassifiers>
+</ecore:EPackage>
