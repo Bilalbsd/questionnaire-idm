@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-    <libraryInfo home="/usr/lib/jvm/java-8-openjdk-amd64" version="1.8.0_432">
-        <bootpath>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar"/>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar"/>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar"/>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar"/>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar"/>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar"/>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar"/>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
-        </bootpath>
-        <extensionDirs>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext"/>
-            <entry path="/usr/java/packages/lib/ext"/>
-        </extensionDirs>
-        <endorsedDirs>
-            <entry path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
-        </endorsedDirs>
-    </libraryInfo>
-    <libraryInfo home="/usr/lib/jvm/java-21-openjdk-amd64" version="21.0.5"/>
-    <libraryInfo home="/home/e20200007470/Bureau/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.5.v20241023-1957/jre" version="21.0.5"/>
-    <libraryInfo home="/usr/lib/jvm/java-11-openjdk-amd64" version="11.0.25"/>
-    <libraryInfo home="/home/e20200007470/Bureau/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.5.v20241023-1957" version="21.0.5">
+    <libraryInfo home="C:\Users\Bilal\Desktop\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.5.v20241023-1957\jre" version="21.0.5"/>
+    <libraryInfo home="C:\Users\Bilal\Desktop\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.5.v20241023-1957" version="21.0.5">
         <bootpath>
             <entry path="null"/>
         </bootpath>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="questionnaire" nsURI="http://www.example.org/questionnaire"
+    nsPrefix="questionnaire">
+  <eClassifiers xsi:type="ecore:EClass" name="Questionnaire">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peutRevenirEnArriere" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questions" upperBound="-1"
+        eType="#//Question" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etiquettes" upperBound="-1"
+        eType="#//Etiquette" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Question">
+    <eOperations name="testerReponse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intitule" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="difficulte" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeDuChoix" eType="#//TypeChoix"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propositions" lowerBound="2"
+        upperBound="-1" eType="#//Proposition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reponses" lowerBound="1"
+        upperBound="-1" eType="#//Proposition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etiquettes" upperBound="-1"
+        eType="#//Etiquette" eOpposite="#//Etiquette/question"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Proposition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contenu" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Etiquette">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="question" eType="#//Question"
+        eOpposite="#//Question/etiquettes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TypeChoix">
+    <eLiterals name="CHOIX_UNIQUE"/>
+    <eLiterals name="CHOIX_MULTIPLE" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

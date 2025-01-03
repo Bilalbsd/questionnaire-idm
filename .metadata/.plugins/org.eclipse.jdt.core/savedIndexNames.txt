@@ -1,2 +1,19 @@
-INDEX VERSION 1.134+/home/e20200007470/Bureau/project_idm/.metadata/.plugins/org.eclipse.jdt.core
+INDEX VERSION 1.134+C:\Users\Bilal\Desktop\projet-idm\.metadata\.plugins\org.eclipse.jdt.core
+2487072523.index
+1439174258.index
+2096621300.index
+1892266167.index
+2478624029.index
+3113830522.index
+25737461.index
+1064198955.index
+2902371414.index
+4217425215.index
+2331164296.index
+4185537124.index
+1106061772.index
+3252129864.index
+4106855671.index
+2134377496.index
+3588942257.index
 1865797976.index

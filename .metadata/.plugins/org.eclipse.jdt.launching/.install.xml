@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-    <entry loc="/usr/lib/jvm/java-8-openjdk-amd64" stamp="1731491169841"/>
-    <entry loc="/usr/lib/jvm/java-21-openjdk-amd64" stamp="1731491225127"/>
-    <entry loc="/home/e20200007470/Bureau/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.5.v20241023-1957/jre" stamp="1730974791660"/>
-    <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1731491197130"/>
-    <entry loc="/home/e20200007470/Bureau/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.5.v20241023-1957" stamp="1730974791676"/>
+    <entry loc="C:\Users\Bilal\Desktop\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.5.v20241023-1957\jre" stamp="1735664100185"/>
+    <entry loc="C:\Users\Bilal\Desktop\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.5.v20241023-1957" stamp="1735664086847"/>
 </dirs>

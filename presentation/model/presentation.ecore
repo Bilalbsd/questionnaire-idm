@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="presentation" nsURI="http://www.example.org/presentation" nsPrefix="presentation">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Questionnaire">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pageResultat" lowerBound="1"
+        eType="#//PageResultat" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pageInitiale" lowerBound="1"
+        eType="#//PageQuestion" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasePage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PageResultat" eSuperTypes="#//BasePage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PageQuestion" eSuperTypes="#//BasePage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retourArriere" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estQCM" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reponseCorrecte" lowerBound="1"
+        upperBound="-1" eType="#//Proposition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propositions" lowerBound="2"
+        upperBound="-1" eType="#//Proposition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="question" lowerBound="1"
+        eType="#//Question" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boutonValidation" lowerBound="1"
+        eType="#//BoutonValidation" eOpposite="#//BoutonValidation/questionSuivante"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boutonRetourArriere" eType="#//BoutonRetourArriere"
+        eOpposite="#//BoutonRetourArriere/questionPrecedente"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Proposition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contenu" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Question">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intitule" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoutonValidation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="BoutonValidation"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="BoutonValidation" value="&#xA;            self.questionSuivante->isEmpty() or self.questionSuivante->forAll(q | q.oclIsKindOf(PageQuestion))"/>
+    </eAnnotations>
+    <eOperations name="valider"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pageResultat" eType="#//PageResultat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionSuivante" lowerBound="1"
+        eType="#//PageQuestion" eOpposite="#//PageQuestion/boutonValidation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoutonRetourArriere">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="BoutonRetourArriere"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="BoutonRetourArriere" value="&#xA;            not self.questionPrecedente.oclIsUndefined() implies &#xA;            self.questionPrecedente.oclIsKindOf(PageQuestion)"/>
+    </eAnnotations>
+    <eOperations name="retourArriere"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionPrecedente" lowerBound="1"
+        eType="#//PageQuestion" eOpposite="#//PageQuestion/boutonRetourArriere"/>
+  </eClassifiers>
+</ecore:EPackage>
